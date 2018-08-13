@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  
+  <script src="js/user-login.js"></script>
+  <link rel="stylesheet" href="css/homestyle.css">
+  <meta charset="utf-8">
+  <title>Volunteer Signup</title>
+
+<style>
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#loginform ,#registerform{
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h4 {
+  text-align: center;  
+  color: black;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+</div>
+<div class="container">
+  <img src="images/1.jpg" alt="Notebook" style="height: 100%,width:100%;">
+  <div class="content">
+ 
+<div class="row">
+  <div class="column">
+      <div id="dialog"></div>
+        <div id="login-box" style="text-align: center;">
+            <form class="signup" id="loginform" action="php/login.php">
+              <h4>Welcome back existing user!</h4>
+            <input type="text" name="username" id="username" placeholder="Username...">
+            <br>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Password...">
+            <br>
+            <br>
+            <div style="overflow:auto;">
+    <div style="float:center;">
+      <button type="submit" onclick="php/login.php" id="submit">Submit</button>
+    </div>
+  </div>
+        <!-- <input type="submit" id="submit" value="Sign In"> -->
+            </form>
+      </div>
+  </div>
+<div class="column">
+    <div id="signup-box" style="text-align: center;">
+  <form class="signupfirst" id="registerform" name="signupForm" onsubmit="return validateSignupForm()" action="" method="post">
+    <h4>New User? Register here!</h4>
+        <input type="text" name="uname" id="uname" placeholder="Username or Mail-id..." >
+        <br>
+        <br>
+       <input type="password" name="pass" id="pass" placeholder="Password..." >
+       <br>
+            <br>
+        <input type="password" name="rePass" id="rePass" placeholder="Re-Enter the Password...">
+        <br>
+            <br>
+        <input type="text" name="myname1" id="myname1" placeholder="First Name...">
+        <br>
+            <br>
+        <input type="text" name="myname2" id="myname2" placeholder="Last Name...">
+        <br>
+            <br>
+     <div style="float:center;">
+      <button type="submit" id="submit-sign" onclick="php/login.php">Submit</button>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+
+</body>
+</html>
